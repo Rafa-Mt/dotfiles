@@ -1,0 +1,15 @@
+# Tmux packages
+# System packages (install with package manager)
+tmux
+
+# Manually installed
+oh-my-tmux        # git clone --single-branch https://github.com/gpakosz/.tmux.git
+
+# Optional (for tmux plugins via TPM)
+# tpm is built into oh-my-tmux, but if you want standalone:
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Optional plugins (install via prefix + I after TPM is set up)
+# tmux-resurrect    # session persistence
+# tmux-continuum    # auto-save/restore
+# tmux-yank         # copy to system clipboard

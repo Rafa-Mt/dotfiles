@@ -1,0 +1,26 @@
+# Neovim packages
+# System packages (install with package manager)
+neovim
+npm
+node
+python3
+go
+rustup
+
+# LSP servers (installed via Mason or manually)
+# html, cssls - built into nvim-lspconfig
+# ts_ls - npm install -g typescript typescript-language-server
+# pyright - pip install pyright
+# rust_analyzer - rustup component add rust-analyzer
+# gopls - go install golang.org/x/tools/gopls@latest
+
+# Formatters (installed via Mason or manually)
+# stylua - cargo install stylua
+# prettier - npm install -g prettier
+# black - pip install black
+# gofumpt - go install mvdan.cc/gofumpt@latest
+# rustfmt - rustup component add rustfmt
+
+# Required for nvim to work properly
+git
+curl

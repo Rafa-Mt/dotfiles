@@ -1,0 +1,4 @@
+# Git packages
+# System packages (install with package manager)
+git
+gh
