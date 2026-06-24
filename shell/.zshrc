@@ -78,6 +78,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
 	git
 	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,7 +117,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 eval "$(starship init zsh)"
-source /home/rafael/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="$HOME/.opencode/bin/:$PATH"
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
