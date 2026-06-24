@@ -2,3 +2,6 @@
 *.swo
 *~
 .DS_Store
+
+# Local overrides (WSL, machine-specific)
+local.lua
