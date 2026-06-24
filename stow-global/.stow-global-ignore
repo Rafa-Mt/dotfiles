@@ -1,0 +1,3 @@
+# Global stow ignore rules
+# Ignore all .txt files (safety net for future files)
+.*\.txt
