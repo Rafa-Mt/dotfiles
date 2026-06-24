@@ -7,7 +7,7 @@ Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 ### First Time Setup
 ```bash
 # Clone the repo anywhere you like
-git clone <your-repo-url> ~/dotfiles
+git clone <this-repo-url> ~/dotfiles
 
 # Install all configs
 cd ~/dotfiles
