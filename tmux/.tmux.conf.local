@@ -1,0 +1,168 @@
+# Oh my tmux! local configuration
+# TokyoNight theme with Powerline separators (matching NvChad)
+
+# -- general ------------------------------------------------------------------
+
+# new window retains current path
+tmux_conf_new_window_retain_current_path=true
+
+# new pane retains current path
+tmux_conf_new_pane_retain_current_path=true
+
+# -- theming (TokyoNight) -----------------------------------------------------
+
+tmux_conf_theme=enabled
+
+# TokyoNight colour palette
+tmux_conf_theme_colour_1="#16161e"    # dark bg (status bar)
+tmux_conf_theme_colour_2="#3b4261"    # muted border, inactive windows
+tmux_conf_theme_colour_3="#a9b1d6"    # muted text
+tmux_conf_theme_colour_4="#7aa2f7"    # blue accent (active elements)
+tmux_conf_theme_colour_5="#e0af68"    # yellow (prefix, warnings)
+tmux_conf_theme_colour_6="#15161e"    # darkest bg (left status segment 1)
+tmux_conf_theme_colour_7="#7aa2f7"    # blue fg (left status segment 1 text)
+tmux_conf_theme_colour_8="#16161e"    # dark bg (left status segment 1)
+tmux_conf_theme_colour_9="#7aa2f7"    # blue (status left segment 2 bg)
+tmux_conf_theme_colour_10="#15161e"   # darkest bg (status left segment 2)
+tmux_conf_theme_colour_11="#a9b1d6"   # muted text (status left segment 3)
+tmux_conf_theme_colour_12="#a9b1d6"   # muted text (status right segment 1)
+tmux_conf_theme_colour_13="#16161e"   # dark bg (status right segment 1)
+tmux_conf_theme_colour_14="#7aa2f7"   # blue (status right segment 2)
+tmux_conf_theme_colour_15="#3b4261"   # muted bg (status right segment 2)
+tmux_conf_theme_colour_16="#15161e"   # darkest bg (right status end)
+tmux_conf_theme_colour_17="#7aa2f7"   # blue (right status end text)
+
+# window style
+tmux_conf_theme_window_fg="default"
+tmux_conf_theme_window_bg="default"
+
+# highlight focused pane
+tmux_conf_theme_highlight_focused_pane=false
+
+# pane borders
+tmux_conf_theme_pane_border_style=thin
+tmux_conf_theme_pane_border="#3b4261"
+tmux_conf_theme_pane_active_border="#7aa2f7"
+
+# pane indicators
+tmux_conf_theme_pane_indicator="#7aa2f7"
+tmux_conf_theme_pane_active_indicator="#7aa2f7"
+
+# status line command style
+tmux_conf_theme_message_fg="#16161e"
+tmux_conf_theme_message_bg="#7aa2f7"
+tmux_conf_theme_message_attr="bold"
+
+tmux_conf_theme_message_command_fg="#7aa2f7"
+tmux_conf_theme_message_command_bg="#16161e"
+tmux_conf_theme_message_command_attr="bold"
+
+# window modes style
+tmux_conf_theme_mode_fg="#16161e"
+tmux_conf_theme_mode_bg="#7aa2f7"
+tmux_conf_theme_mode_attr="bold"
+
+# status line style
+tmux_conf_theme_status_fg="#a9b1d6"
+tmux_conf_theme_status_bg="#16161e"
+tmux_conf_theme_status_attr="none"
+
+# terminal title
+tmux_conf_theme_terminal_title="#h ❐ #S ● #I #W"
+
+# window status style
+tmux_conf_theme_window_status_fg="#a9b1d6"
+tmux_conf_theme_window_status_bg="#16161e"
+tmux_conf_theme_window_status_attr="none"
+tmux_conf_theme_window_status_format="#I #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,!,}#{?window_zoomed_flag,Z,}"
+
+# window current status style
+tmux_conf_theme_window_status_current_fg="#16161e"
+tmux_conf_theme_window_status_current_bg="#7aa2f7"
+tmux_conf_theme_window_status_current_attr="bold"
+tmux_conf_theme_window_status_current_format="#I #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,!,}#{?window_zoomed_flag,Z,}"
+
+# window activity status style
+tmux_conf_theme_window_status_activity_fg="default"
+tmux_conf_theme_window_status_activity_bg="default"
+tmux_conf_theme_window_status_activity_attr="underscore"
+
+# window bell status style
+tmux_conf_theme_window_status_bell_fg="#e0af68"
+tmux_conf_theme_window_status_bell_bg="default"
+tmux_conf_theme_window_status_bell_attr="blink,bold"
+
+# window last status style
+tmux_conf_theme_window_status_last_fg="#7aa2f7"
+tmux_conf_theme_window_status_last_bg="#3b4261"
+tmux_conf_theme_window_status_last_attr="none"
+
+# Powerline separators
+tmux_conf_theme_left_separator_main='\uE0B0'
+tmux_conf_theme_left_separator_sub='\uE0B1'
+tmux_conf_theme_right_separator_main='\uE0B2'
+tmux_conf_theme_right_separator_sub='\uE0B3'
+
+# status left content
+tmux_conf_theme_status_left=" #S "
+tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
+tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
+tmux_conf_theme_status_left_attr="bold,none,none"
+
+# status right content
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized} , %H:%M , %d %b | #{hostname} "
+tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
+tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
+tmux_conf_theme_status_right_attr="none,none,bold"
+
+# indicators
+tmux_conf_theme_pairing="⚇"
+tmux_conf_theme_pairing_fg="none"
+tmux_conf_theme_pairing_bg="none"
+tmux_conf_theme_pairing_attr="none"
+
+tmux_conf_theme_prefix="⌨"
+tmux_conf_theme_prefix_fg="none"
+tmux_conf_theme_prefix_bg="none"
+tmux_conf_theme_prefix_attr="none"
+
+tmux_conf_theme_mouse="↗"
+tmux_conf_theme_mouse_fg="none"
+tmux_conf_theme_mouse_bg="none"
+tmux_conf_theme_mouse_attr="none"
+
+tmux_conf_theme_root="!"
+tmux_conf_theme_root_fg="none"
+tmux_conf_theme_root_bg="none"
+tmux_conf_theme_root_attr="bold,blink"
+
+tmux_conf_theme_synchronized="⚏"
+tmux_conf_theme_synchronized_fg="none"
+tmux_conf_theme_synchronized_bg="none"
+tmux_conf_theme_synchronized_attr="none"
+
+# clock
+tmux_conf_theme_clock_colour="#7aa2f7"
+tmux_conf_theme_clock_style="24"
+
+# -- clipboard ----------------------------------------------------------------
+
+tmux_conf_copy_to_os_clipboard=true
+
+# -- tpm ----------------------------------------------------------------------
+
+tmux_conf_update_plugins_on_launch=true
+tmux_conf_update_plugins_on_reload=true
+tmux_conf_uninstall_plugins_on_reload=true
+
+# -- user overrides ------------------------------------------------------------
+
+# replace C-b with C-a
+set -gu prefix2
+unbind C-a
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+# status bar on top
+set -g status-position top
