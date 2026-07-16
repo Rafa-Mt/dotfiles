@@ -112,7 +112,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
 # NeoVim export
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
@@ -120,8 +119,14 @@ eval "$(starship init zsh)"
 export PATH="$HOME/.opencode/bin/:$PATH"
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
-# opencode
+# Opencode
 export PATH=/home/rafael/.opencode/bin:$PATH
+
+# Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # Aliases
 alias ls='eza --icons=always'
@@ -129,3 +134,4 @@ alias reload='source $HOME/.zshrc'
 alias zsh-conf='nvim $HOME/.zshrc'
 alias grep='rg'
 alias ch='nvim $HOME/development/dotfiles/cheatsheet.md'
+alias torrent='bash $HOME/development/scripts/shell/qbittorrent.sh'

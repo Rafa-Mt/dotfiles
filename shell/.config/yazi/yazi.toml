@@ -1,0 +1,21 @@
+[manager]
+show_hidden = false
+sort_by = "natural"
+sort_dir_first = true
+linemode = "size"
+
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true, desc = "Neovim" },
+]
+open = [
+	{ run = 'nvim "$@"', desc = "Open" },
+]
+reveal = [
+	{ run = 'xdg-open "$(dirname "$1")"', desc = "Reveal" },
+]
+
+[open]
+rules = [
+	{ mime = "*/", use = ["open", "edit"] },
+]
