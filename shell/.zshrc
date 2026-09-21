@@ -119,8 +119,12 @@ eval "$(starship init zsh)"
 export PATH="$HOME/.opencode/bin/:$PATH"
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
+## - AI
 # Opencode
-export PATH=/home/rafael/.opencode/bin:$PATH
+#export PATH=/home/rafael/.opencode/bin:$PATH
+
+# Codex
+export PATH=/home/rafael/.codex/bin:$PATH
 
 # Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -135,4 +139,4 @@ alias zsh-conf='nvim $HOME/.zshrc'
 alias grep='rg'
 alias ch='nvim $HOME/development/dotfiles/cheatsheet.md'
 alias torrent='bash $HOME/development/scripts/shell/qbittorrent.sh'
-alias cd='zoxide'
+alias cd='z'

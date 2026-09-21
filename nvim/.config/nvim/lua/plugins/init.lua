@@ -13,8 +13,26 @@ return {
     end,
   },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
+  -- blink.cmp completion engine
+  { import = "nvchad.blink.lazyspec" },
+
+  {
+    "saghen/blink.cmp",
+    dependencies = { "fang2hou/blink-copilot" },
+    opts = {
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer", "copilot" },
+        providers = {
+          copilot = {
+            name = "copilot",
+            module = "blink-copilot",
+            score_offset = 100,
+            async = true,
+          },
+        },
+      },
+    },
+  },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -74,7 +92,7 @@ return {
     event = "InsertEnter",
     config = function()
       require("copilot").setup({
-        suggestion = { enabled = true },
+        suggestion = { enabled = false },
         panel = { enabled = false },
       })
     end,
