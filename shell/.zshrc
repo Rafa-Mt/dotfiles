@@ -116,7 +116,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 eval "$(starship init zsh)"
-export PATH="$HOME/.opencode/bin/:$PATH"
+
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
 ## - AI
@@ -129,14 +129,26 @@ export PATH=/home/rafael/.codex/bin:$PATH
 # Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# zoxide
+# Zoxide
 eval "$(zoxide init zsh)"
 
+# Flutter
+export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
+export ANDROID_HOME="/home/rafael/development/personal-projects/finance-tracker/.tooling/android-sdk"
+export PATH="$JAVA_HOME/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
+
+# SDKMan
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 # Aliases
-alias ls='eza --icons=always'
+alias ls='eza --icons=always -s type'
 alias reload='source $HOME/.zshrc'
 alias zsh-conf='nvim $HOME/.zshrc'
 alias grep='rg'
 alias ch='nvim $HOME/development/dotfiles/cheatsheet.md'
 alias torrent='bash $HOME/development/scripts/shell/qbittorrent.sh'
 alias cd='z'
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
